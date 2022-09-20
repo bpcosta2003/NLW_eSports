@@ -7,15 +7,14 @@ import CreateAdModal from "./components/CreateAdModal";
 import GameBanner from "./components/GameBanner";
 import "./styles/main.css";
 
-//! MELHORIAS :
-
 /*
 
-1. Responsividade
-2. Carousel para mais Games ( KEEN-SLIDER )
-3. Usar Select do Radix 
-4. Validação do formulário ( REACT HOOK FORM )
-5. Autenticação ( Logar com a Twitch, Discord etc...)
+!MELHORIAS :
+
+!2. Carousel para mais Games ( KEEN-SLIDER )
+!3. Usar Select do Radix 
+!4. Validação do formulário ( REACT HOOK FORM )
+!5. Autenticação ( Logar com a Twitch, Discord etc...)
 
 */
 
@@ -41,7 +40,7 @@ function App() {
   return (
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
       <img src={logoImg} />
-      <h1 className="text-6xl text-white font-black my-20">
+      <h1 className="text-4xl text-white font-black m-10 my-20 mb-5 text-center lg:text-6xl lg:m-20 ">
         Seu{" "}
         <span className="text-transparent bg-nlw-gradient bg-clip-text">
           duo
@@ -49,7 +48,7 @@ function App() {
         está aqui
       </h1>
 
-      <div className="grid grid-cols-6 gap-6 mt-16">
+      <div className="flex min-w-full flex-wrap justify-center items-center gap-6 ml-10 mr-10 mt-16  transition-all">
         {games.map((game) => {
           return (
             <GameBanner

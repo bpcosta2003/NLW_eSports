@@ -6,7 +6,7 @@ import * as ToggleGroup from "@radix-ui/react-toggle-group";
 import axios from "axios";
 import {Check, GameController} from "phosphor-react";
 import {FormEvent, useEffect, useState} from "react";
-import Input from "./Form/input";
+import Input from "./Form/Input";
 
 interface Game {
   id: string;
@@ -58,7 +58,7 @@ export default function CreateAdModal() {
     <>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/60 inset-0 fixed" />
-        <Dialog.Content className="fixed bg-[#2a2634] py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[480px] shadow-lg shadow-black/25">
+        <Dialog.Content className="fixed bg-[#2a2634] py-8 px-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg w-[300px] shadow-lg shadow-black/25 sm:w-[480px]">
           <Dialog.Title className="text-3xl font-black">
             Publique um anúncio
           </Dialog.Title>
@@ -98,7 +98,7 @@ export default function CreateAdModal() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-rows gap-4 sm:grid-cols-2 sm:gap-6">
               <div className="flex flex-col gap-2">
                 <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
                 <Input
@@ -120,7 +120,7 @@ export default function CreateAdModal() {
               </div>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex flex-col gap-6 sm:flex-row">
               <div className="flex flex-col gap-2">
                 <label htmlFor="weekDays">Quando costuma jogar</label>
 
@@ -215,7 +215,7 @@ export default function CreateAdModal() {
               </div>
             </div>
 
-            <label className="mt-2 flex items-center gap-2 text-sm">
+            <label className="mt-2 flex items-center gap-4 text-sm">
               <Checkbox.Root
                 checked={useVoiceChannel}
                 onCheckedChange={(checked) => {
@@ -234,13 +234,13 @@ export default function CreateAdModal() {
               Costumo me conectar ao chat de voz
             </label>
 
-            <footer className="mt-4 flex justify-end gap-4">
+            <footer className="mt-4 flex flex-col justify-center gap-4 sm:flex-row sm:justify-end">
               <Dialog.Close className="bg-zinc-500 px-5 h-12 rounded-md font-semibold hover:bg-zinc-600">
                 Cancelar
               </Dialog.Close>
               <button
                 type="submit"
-                className="bg-violet-500 px-5 h-12 rounded-md font-semibold flex items-center gap-3 hover:bg-violet-600"
+                className="bg-violet-500 px-5 h-12 rounded-md font-semibold flex items-center justify-center gap-3 hover:bg-violet-600"
               >
                 <GameController size={24} /> Encontrar duo
               </button>
