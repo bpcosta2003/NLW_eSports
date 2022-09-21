@@ -50,7 +50,6 @@ Veja o exemplo de uso do projeto:
 - Buscar discord do usuário de um determinado anúncio, rota GET /ads/:id/discord ✔️
 
 ## Melhorias pendentes ⚙️ 
-- Responsividade ❌
 - Carousel para mais Games ( KEEN-SLIDER ) ❌
 - Usar Select do Radix ❌
 - Validação do formulário ( REACT HOOK FORM ) ❌
